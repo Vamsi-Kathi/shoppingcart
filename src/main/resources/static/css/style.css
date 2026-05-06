@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.navbar {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(59, 130, 246, 0.95)) !important;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #d4af37 !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4af37 !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: #d4af37;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+  left: 10%;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(30, 58, 138, 0.3), 0 0 30px rgba(212, 175, 55, 0.2) !important;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #f59e0b, #d4af37);
+}
+
+.card-img-top, .product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .product-img {
+  transform: scale(1.1);
+}
+
+.card-sh {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.card-sh:hover {
+  box-shadow: 0 20px 50px rgba(30, 58, 138, 0.4) !important;
+  transform: translateY(-10px) scale(1.05);
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.price-section {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: #f3f4f6 !important;
+}
+
+.discounted-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #d4af37 !important;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #d4af37, #f59e0b) !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 12px 30px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4) !important;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6) !important;
+  background: linear-gradient(135deg, #f59e0b, #d4af37) !important;
+}
+
+.carousel-item img {
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.category-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(248,250,252,0.9));
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  background: linear-gradient(135deg, #d4af37, #f59e0b);
+  color: white;
+  transform: scale(1.1);
+}
+
+.pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  border-color: #1e3a8a;
+}
+
+.footer {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+  box-shadow: 0 -8px 32px rgba(30, 58, 138, 0.3);
+}
+
+.search-input {
+  border-radius: 30px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-img, .card-img-top {
+    height: 200px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+}
+
+.error {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+.success {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.cat-div {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
